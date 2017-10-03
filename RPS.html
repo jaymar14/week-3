@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>R,P,S Game</title>
+</head>
+<body>
+  <div id="game">
+  </div>
+
+  <script type="text/javascript">
+  	var computerChoices = ["r", "p", "s"];
+
+  	var wins = 0;
+  	var losses= 0;
+  	var ties = 0;
+    // Whenever a key is pressed, alert "pressed a button".
+    document.onkeyup = function(event) {
+
+      //alert("pressed a button");
+
+      var userShoot = event.key;
+
+      console.log(userShoot);
+
+       var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+       if (userShoot === "r") || (userShoot === "p") || (userShoot === "s") {
+
+        if ((userShoot === "r") && (computerGuess === "s")) {
+          wins++;
+        } else if (userShoot === "r") && (computerGuess === "p") {
+          losses++;
+        } else if (userShoot === "s") && (computerGuess === "r") {
+          losses++;
+        } else if (userShoot === "s") && (computerGuess === "p") {
+          wins++;
+        } else if (userShoot === "p") && (computerGuess === "r") {
+          wins++;
+        } else if (userShoot === "p") && (computerGuess === "s") {
+          losses++;
+        } else if (userShoot === computerGuess) {
+          ties++;
+        }
+
+
+       	alert("user shoot: " + userShoot);
+       	alert("Computer guess: " + computerGuess);
+       	var html = 
+          "<p>You chose: " + userShoot + "</p>" +
+          "<p>The computer chose: " + computerGuess + "</p>" +
+          "<p>wins: " + wins + "</p>" +
+          "<p>losses: " + losses + "</p>" +
+          "<p>ties: " + ties + "</p>"; 
+
+       	document.querySelector("#game").innerHTML = html;
+
+       }
+    };
+  </script>
+</body>
+</html>
+

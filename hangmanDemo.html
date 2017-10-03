@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman demo take 1</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-6 col1">col1</div>
+			<div class="col-sm-12 col-md-6 col2">col2</div>
+			<div id="game">
+				<p>Pick a letter</p>
+			</div>	
+		</div>
+	</div>
+
+<script type="text/javascript">
+  var computerChoices = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","x","y","z"];
+  var wins = 0;
+  var losses = 0;
+
+  document.onkeyup = function(event){
+  	var userGuess = event.key;
+  }
+  var majicWord = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+  alert("User Guess: " + userGuess);
+  alert("Majic Word: " + majicWord);
+
+  var html =
+  	"<p>You chose: " + userGuess + "</p>" + "<p>The phrase: " + majicWord + "</p>" + "<p>wins: " + wins + "</p>" + "<p>losses: " + losses "</p>" + "<p>ties: " + ties + "</p>";
+  document.querySelector("#game").innerHTML	 = html;
+  }
+  }; 	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>HangmanProgram</title>
+<link rel="stylesheet" type="text/css" href="/Users/Jaymar/Desktop/smu class activitities/WEEK 3/untitled.css">
+<link rel="stylesheet" type="text/css" href="/Users/Jaymar/Desktop/smu class activitities/WEEK 3/untitledreset.css">
+
+ 
+</head>
+ 
+ 
+ 
+<body>
+ 
+<h3><strong><center>This is the Hangman Game</center></strong><br>
+ 
+ 
+ 
+<br>Click Start Game button to begin<br>
+
+ 
+<br>Then click the guess button<br>
+  
+ 
+<br>Click Reset to start over<br>
+<br>
+
+ 
+
+ 
+<div id="wordToGuess"></div>
+ 
+ 
+<input type="button" value="Start Game " onclick=" getword () "><br>
+ 
+ 
+ 
+<!-- Hidden field for storing answer -->
+ 
+<input type="hidden" name="answer" value=""/>
+ 
+ 
+ 
+<input type="button" value="Guess" onclick="formCheck()">
+ 
+<input name = "ltr" type="text" size = "2"><br>
+ 
+
+<br>The Word is:
+ 
+<input name = "boxone" type="text">
+
+ 
+<BR>
+ 
+<BR>
+  
+Wrong Letters<input name = "wrongletters" type="text" size = "36">
+ 
+<BR>
+ 
+<BR>
+ 
+<input type="reset" value="Reset">
+</form>
+
+</head>
+
+<script src="/Users/Jaymar/Desktop/smu class activitities/WEEK 3/untitled.js"></script>
+</body>

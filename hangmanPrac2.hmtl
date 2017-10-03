@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to Hangman Game</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var gameWord = ["word","other"];
+	var gameWord_random = gameWord[Math.floor((Math.random()*gameWord.length)+1)];
+	console.log(gameWord_random);
+	
+	document.onkeyup=funciton(event){
+		var userGuess = event.key;
+		var stringLength = gameWord_random.length;
+
+		for(var i = 0; i<stringLength; i++){
+			if(userGuess === gameWord_random[i]){
+				console.log("correct");
+			}
+		}
+	};
+</script>
+
+</body>
+</html>
